@@ -8,145 +8,199 @@
   <meta name="author" content="REPEDRO, Maxine">
   <title>Top 4 Universities in the Philippines</title>
   <link rel="icon" href="../assets/top4univ_favicon2.png" type="image/png"/>
-  <script src="script.js" defer></script>
 
   <style>
+    * {
+      box-sizing: border-box; margin: 0; padding: 0;
+    }
+    html, body { width: 100%; overflow-x: hidden;
+    }
     body {
-      background-image: url('../assets/Pic-UST.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center; font-family: Arial, sans-serif; margin: 0; padding: 0;
+      background-image: url('../assets/Pic-UST.jpg'); background-size: cover;background-repeat: no-repeat;background-attachment: fixed;background-position: center;font-family: Arial, sans-serif;
     }
-
     section div {
-      margin-bottom: 40px; 
+      margin-bottom: 40px; animation: fadeInUp 1s ease both;
     }
-
     h1, h2, h3, p {
       margin: 10px 0;
     }
 
+  
     table {
-      border-collapse: collapse;width: 100%;background-color: #fffbe6;border: 2px solid #FFD700;
+      border-collapse: collapse;width: 100%;background-color: #fffbe6;border: 2px solid #FFD700;animation: fadeInUp 1s ease both;
     }
 
-    table th, table td {border: 1px solid #FFD700;padding: 10px;text-align: center;
+    table th, table td {
+      border: 1px solid #FFD700;padding: 10px;text-align: center;
     }
 
-    footer {background-color: #333;padding: 15px;text-align: left;
+    
+    footer {
+      background-color: #333;padding: 15px;text-align: left;animation: fadeIn 1s ease both;
     }
 
-    footer p {color: #fffbe6;margin: 5px 0;font-size: 14px;
+    footer p {
+      color: #fffbe6;margin: 5px 0;font-size: 14px;
     }
 
-    footer a {color: #FFD700;text-decoration: none;
+    footer a {
+      color: #FFD700;text-decoration: none;transition: color 0.3s;
     }
 
-    footer a:hover {text-decoration: underline;
+    footer a:hover {
+      text-decoration: underline;color: white;
     }
+
+
+    nav {
+      border: 2px solid #FFD700;
+      background-color: #fffbe6;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      z-index: 1000;
+      animation: slideDown 0.8s ease both;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+    }
+    nav a:hover {
+      color: #FFD700;transform: scale(1.1);
+    }
+
+    .header-overlay {
+      padding: 60px 40px;
+      text-align: center;
+      margin-top: 30px;
+      width: 100%;
+      backdrop-filter: blur(6px);
+      animation: fadeInUp 1.2s ease both;
+    }
+
+    .header-content {
+      display: flex;flex-direction: column;align-items: center;justify-content: center;
+    }
+
+    
+    .header-logo {
+      width: 110px;
+      height: 125px;
+      margin-bottom: 15px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: logoDrop 1.5s ease forwards;
+    }
+
+    .header-text h1, .header-text h3 {
+      color: #fffbe6;
+      margin: 5px 0;
+      animation: fadeIn 2s ease both;
+    }
+
+    @keyframes logoDrop {
+      0% {opacity: 0; transform: translateY(-30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideDown {
+      from {opacity: 0; transform: translate(-50%, -20px);}
+      to {opacity: 1; transform: translate(-50%, 0);}
+    }
+
   </style>
 </head>
 
 <body>
   <header>   
-    <nav style="border: 2px solid #FFD700; background-color: #fffbe6; padding: 10px; text-align: center; position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 90%; z-index: 1000;">
-      <a href="https://maxine0323.github.io/CS3_2ndQtrPortfolio_MgREPEDRO//public/index.html" style="margin: 0 15px; text-decoration: none; color: black; font-weight: bold;">Home</a>
-      <a href="#" style="margin: 0 15px; text-decoration: none; color: black; font-weight: bold;">ADMU</a>
-      <a href="https://cariangela.github.io/2QPortfolioMgGABRIEL/public/2Q1GMgGabriel.html" style="margin: 0 15px; text-decoration: none; color: black; font-weight: bold;">UP</a>
-      <a href="https://cevespinosa.github.io/2QRepositoryMgESPINOSA/public/2Q1GMgEspinosa.html" style="margin: 0 15px; text-decoration: none; color: black; font-weight: bold;">DLSU</a>
+    <nav>
+      <a href="https://maxine0323.github.io/CS3_2ndQtrPortfolio_MgREPEDRO/public/index.html">Home</a>
+      <a href="https://meganrainnidea.github.io/2QPortfolio_MgNIDEA/public/2Q1GMgNidea.html">ADMU</a>
+      <a href="https://cariangela.github.io/2QPortfolioMgGABRIEL/public/2Q1GMgGabriel.html">UP</a>
+      <a href="https://cevespinosa.github.io/2QRepositoryMgESPINOSA/public/2Q1GMgEspinosa.html">DLSU</a>
+      <a href="2Q1GMagnesiumRepedro.html">UST</a>
     </nav>
 
-    <div style="text-align: center; margin-top: 100px;">
-      <img src="../assets/ustlogo-wiki.png" alt="UST logo" width="100" height="115">
-    </div>
-
-    <div style="text-align: center; padding: 5px; background-color: #fffbe6;">
-      <h1>𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐲 𝐨𝐟 𝐒𝐚𝐧𝐭𝐨 𝐓𝐨𝐦𝐚𝐬 (𝐔𝐒𝐓)</h1>
-      <h3>A Legacy of Faith, Knowledge, and Service</h3>
+    <div class="header-overlay">
+      <div class="header-content">
+        <img src="../assets/ustlogo-wiki.png" alt="UST logo" class="header-logo">
+        <div class="header-text">
+          <h1>𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐲 𝐨𝐟 𝐒𝐚𝐧𝐭𝐨 𝐓𝐨𝐦𝐚𝐬 (𝐔𝐒𝐓)</h1>
+          <h3>A Legacy of Faith, Knowledge, and Service</h3>
+        </div>
+      </div>
     </div>
   </header>
 
   <section style="padding: 20px; margin-top: 20px;">
     <div style="padding: 20px; background-color: #fffbe6;">
       <h2>History of UST</h2>
-      <p>
-        Founded on April 28, 1611, the University of Santo Tomas (UST) is recognized as the oldest existing university in Asia. Originally Bishop Miguel de Benavides, O.P. initiated the establishment of this institution to prepare young men for the priesthood, his personal library and funds became the start of UST’s history. UST has played a big role in shaping the education, Catholicism, and culture of the Philippines for over four centuries. From its humble beginnings as the Colegio de Nuestra Señora del Santisimo Rosario in Intramuros, it has grown into a world-renowned institution for learning. Today, UST proudly holds the title of being the largest Catholic university in the world located on a single campus. With their mission that aims to develop knowledgeable, competent, and compassionate individuals guided by faith and reason, dedicated to serving the Church, the nation, and the world. Along with their vision that by 2030, the University of Santo Tomas envisions becoming a leading Catholic university in the Asia-Pacific, dedicated to holistic education and social transformation. UST truly serves as an important asset to the students' morals and the Philippines' future generations to come.
-      </p>
+      <p>Founded on April 28, 1611 the University of Santo Tomas (UST) is recognized as the oldest existing university in Asia. Originally Bishop Miguel de Benavides, O.P. initiated the establishment of this institution to prepare young men for the priesthood, his personal library and funds became the start of UST’s history. UST has played a big role in shaping the education, Catholicism, and culture of the Philippines for over four centuries. From its humble beginnings as the Colegio de Nuestra Señora del Santisimo Rosario in Intramuros, it has grown into a world-renowned institution for learning. Today, UST proudly holds the title of being the largest Catholic university in the world located on a single campus. With their mission that aims to develop knowledgeable, competent, and compassionate individuals guided by faith and reason, dedicated to serving the Church, the nation, and the world. Along with their vision that by 2030, the University of Santo Tomas envisions becoming a leading Catholic university in the Asia-Pacific, dedicated to holistic education and social transformation. UST truly serves as an important asset to the students' morals and the Philippines' future generations to come.
+</p>
     </div>
 
     <div style="text-align: center;">
-      <img src="../assets/IMG_1353-1068x601.jpg" alt="UST campus" width="450" height="300" style="border: 2px solid #FFD700;">
+      <img src="../assets/IMG_1353-1068x601.jpg" alt="UST campus" width="480" height="300" style="border: 2px solid #FFD700;">
     </div>
 
-    <div style="padding: 20px; background-color: #fffbe6">
+    <div style="padding: 20px; background-color: #fffbe6;">
       <h2>Achievements</h2>
-      <p>
-        The University of Santo Tomas has earned numerous awards and recognitions that reflect its commitment to excellence in education, research, and service. It has been named “School of the Year” multiple times at the Philippine Student Quill Awards for outstanding student communication projects. UST consistently honors its faculty through the Dangal ng UST Awards and Research Achievement Awards, recognizing excellence in teaching, innovation, and international publications. The university also celebrates its students through the UST Student Awards, which include distinctions such as the Rector’s Academic Award and the Benavides Outstanding Achievement Award. Moreover, UST’s TOTAL (The Outstanding Thomasian Alumni) Awards honor alumni who have made significant contributions to the Church, the nation, and the world. In research, UST faculty members have been recognized nationally, including recipients of the Outstanding Young Scientist Award by the National Academy of Science and Technology. Internationally, UST has ranked among the top Philippine universities in the Times Higher Education Impact Rankings, highlighting its dedication to sustainability and the United Nations’ Sustainable Development Goals.
-      </p> 
+      <p>The University of Santo Tomas has earned numerous awards and recognitions that reflect its commitment to excellence in education, research, and service. It has been named “School of the Year” multiple times at the Philippine Student Quill Awards for outstanding student communication projects. UST consistently honors its faculty through the Dangal ng UST Awards and Research Achievement Awards, recognizing excellence in teaching, innovation, and international publications. The university also celebrates its students through the UST Student Awards, which include distinctions such as the Rector’s Academic Award and the Benavides Outstanding Achievement Award. Moreover, UST’s TOTAL (The Outstanding Thomasian Alumni) Awards honor alumni who have made significant contributions to the Church, the nation, and the world. In research, UST faculty members have been recognized nationally, including recipients of the Outstanding Young Scientist Award by the National Academy of Science and Technology. Internationally, UST has ranked among the top Philippine universities in the Times Higher Education Impact Rankings, highlighting its dedication to sustainability and the United Nations’ Sustainable Development Goals.</p>
     </div>
 
     <div style="text-align: center;">
       <img src="../assets/Achievements.jpg" alt="UST achievements" width="420" height="300" style="border: 2px solid #FFD700;">
     </div>
 
-    <div style="padding: 20px; background-color: #fffbe6">
+    <div style="padding: 20px; background-color: #fffbe6;">
       <h2>Student Life</h2>
-      <p>
-        Student life at UST is fun, exciting, and full of opportunities to grow. There is always something happening on campus—from joining different clubs and organizations to cheering for the Growling Tigers during UAAP season. These activities help students discover their interests, make new friends, and learn outside the classroom. UST also has special traditions like the Thomasian Welcome Walk, where freshmen pass through the Arch of the Centuries, and Paskuhan, the famous Christmas celebration filled with lights, music, and joy. Being a Thomasian isn’t just about studying; it’s about experiencing a lively community that helps you become a better, more compassionate person.
-      </p>
+      <p>Student life at UST is fun, exciting, and full of opportunities to grow. There’s always something happening on campus  from joining different clubs and organizations to cheering for the Growling Tigers during UAAP season. These activities help students discover their interests, make new friends, and learn outside the classroom. UST also has special traditions like the Thomasian Welcome Walk, where freshmen pass through the Arch of the Centuries, and Paskuhan, the famous Christmas celebration filled with lights, music, and joy. Being a Thomasian isn’t just about studying; it’s about experiencing a lively community that helps you become a better, more compassionate person.
+</p>
     </div>
 
     <div style="text-align: center;">
       <video width="500" height="300" controls>
         <source src="../assets/SSvid.net--UNIVERSITY-HYMN-The-UST-Hymn-LYRIC-VIDEO-Hymn-of-UST-Philippines_360p.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
     </div>
 
     <div style="text-align: center; padding: 5px; background-color: #fffbe6;">
       <h2>Top 5 Undergraduate Courses at UST</h2>
-    
-
-    <table>
-      <tr style="background-color: #FFD700; text-align: center;">
-        <th>Rank</th>
-        <th>Course</th>
-        <th>College / Faculty</th>
-        <th>Special Recognition</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>BS Nursing</td>
-        <td>College of Nursing</td>
-        <td rowspan="2">Consistently among the Top Performing Programs in Board Exams</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>BS Medical Technology</td>
-        <td>Faculty of Pharmacy</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>BS Architecture</td>
-        <td>College of Architecture</td>
-        <td>Recognized as Center of Excellence by CHED</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>BS Accountancy</td>
-        <td>AMV College of Accountancy</td>
-        <td rowspan="2">High Licensure Exam Passing Rates Nationwide</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>BS Biology</td>
-        <td>College of Science</td>
-      </tr>
-    </table>
+      <table>
+        <tr style="background-color: #FFD700;">
+          <th>Rank</th><th>Course</th><th>College / Faculty</th><th>Special Recognition</th>
+        </tr>
+        <tr><td>1</td><td>BS Nursing</td><td>College of Nursing</td><td rowspan="2">Top Performing Programs</td></tr>
+        <tr><td>2</td><td>BS Medical Technology</td><td>Faculty of Pharmacy</td></tr>
+        <tr><td>3</td><td>BS Architecture</td><td>College of Architecture</td><td>Center of Excellence (CHED)</td></tr>
+        <tr><td>4</td><td>BS Accountancy</td><td>AMV College of Accountancy</td><td rowspan="2">High Board Passing Rates</td></tr>
+        <tr><td>5</td><td>BS Biology</td><td>College of Science</td></tr>
+      </table>
     </div>
   </section>
 
   <footer>
-    <p><em>University of Santo Tomas.</em> (2025, July 15). Academic Programs - University of Santo Tomas. <a href="https://www.ust.edu.ph/academics/programs/">Visit Source</a></p>
-    <p><em>University of Santo Tomas.</em> (2023, September 8). Student Achievements - University of Santo Tomas. <a href="https://www.ust.edu.ph/campus-life/student-achievements/">Visit Source</a></p>
-    <p><em>University of Santo Tomas.</em> (2025b, October 10). The University - University of Santo Tomas. <a href="https://www.ust.edu.ph/the-university/">Visit Source</a></p>
+    <p><em>University of Santo Tomas.</em> (2025, July 15). Academic Programs - <a href="https://www.ust.edu.ph/academics/programs/">Visit Source</a></p>
+    <p><em>University of Santo Tomas.</em> (2023, September 8). Student Achievements - <a href="https://www.ust.edu.ph/campus-life/student-achievements/">Visit Source</a></p>
+    <p><em>University of Santo Tomas.</em> (2025b, October 10). The University - <a href="https://www.ust.edu.ph/the-university/">Visit Source</a></p>
   </footer>
 </body>
 </html>
