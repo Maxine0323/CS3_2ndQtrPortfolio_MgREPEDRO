@@ -1,0 +1,49 @@
+nav {
+    background: linear-gradient(to right,#FFD700, #FFD700);
+    color: #fffbe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+  }
+
+  nav a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffdd00;
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover::after,
+  nav a.active::after {
+    width: 100%;
+    background-color: #000000;
+  }
+
+  nav a:hover {
+    color: #000000;
+    transform: scale(1.1);
+  }
+  nav a.active {
+    color: #000000;
+    font-weight: 600;
+  }

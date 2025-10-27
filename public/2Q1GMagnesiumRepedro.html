@@ -8,9 +8,11 @@
   <meta name="author" content="REPEDRO, Maxine">
   <title>Top Four Universities in the Philippines</title>
   <link rel="icon" href="../assets/top4univ_favicon2.png" type="image/png"/>
+  <link rel="stylesheet" href="style.css">
+
 
   <style>
-    * {
+    *{
       box-sizing: border-box; margin: 0; padding: 0;
     }
     html, body { width: 100%; overflow-x: hidden;
@@ -24,8 +26,6 @@
     h1, h2, h3, p {
       margin: 10px 0;
     }
-
-  
     table {
       border-collapse: collapse;width: 100%;background-color: #fffbe6;border: 2px solid #FFD700;animation: fadeInUp 1s ease both;
     }
@@ -50,39 +50,15 @@
     footer a:hover {
       text-decoration: underline;color: white;
     }
-
-
-    nav {
-      border: 2px solid #FFD700;
-      background-color: #fffbe6;
-      padding: 10px;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      z-index: 1000;
-      animation: slideDown 0.8s ease both;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      transition: color 0.3s, transform 0.2s;
-    }
-    nav a:hover {
-      color: #FFD700;transform: scale(1.1);
-    }
-
+    
     .header-overlay {
       padding: 60px 40px;
       text-align: center;
       width: 100%;
       backdrop-filter: blur(6px);
-      animation: fadeInUp 1.2s ease both;
+      opacity: 1;
+      transform: none;
+      animation: none;
     }
 
     .header-content {
@@ -104,7 +80,16 @@
       margin: 5px 0;
       animation: fadeIn 2s ease both;
     }
-
+    .header-top {
+      animation: none;
+      transform: none;
+      opacity: 1;
+      position: relative;
+      z-index: 1001;
+    }
+    img, p {
+    float: center;
+    }
     @keyframes logoDrop {
       0% {opacity: 0; transform: translateY(-30px);}
       100% {opacity: 1; transform: translateY(0);}
@@ -131,10 +116,11 @@
 <body>
   <header>   
     <section>
-    <div style="margin-top:2%; margin-bottom:0%; background-color: #fffbe6; text-align: center; color: #000000; padding-top:50px;padding-bottom:10px;">
-      <h2>Top 4 Universities in the Philippines</h2>
-      <p>Mg11, Mg14, Mg19, and <em>Mg26</em></p>
+    <div class="header-top" style="margin-bottom:0%; background-color: #fffbe6; text-align: center; color: #000000; padding-top:10px;padding-bottom:10px;">
+  <h2>Top 4 Universities in the Philippines</h2>
+  <p>Mg11, Mg14, Mg19, and <em>Mg26</em></p>
     </div>
+
 
     <nav>
       <a href="https://maxine0323.github.io/CS3_2ndQtrPortfolio_MgREPEDRO/public/index.html">Home</a>
