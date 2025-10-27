@@ -37,7 +37,7 @@
   nav a.active::after {
     width: 100%;
   }
-  nav a:visited { color: #e6d97d; }
+  nav a:visited { color: white; }
 
   nav a:hover {
     color: rgb(0, 0, 0);
